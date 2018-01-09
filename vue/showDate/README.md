@@ -1,0 +1,1 @@
+# show another basic example of vue ssr with header management

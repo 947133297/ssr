@@ -1,0 +1,29 @@
+{
+  "name": "showDate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build.srv": "set VUE_ENV=srv& webpack --config ./config/server.config.js",
+    "build.cln": "set VUE_ENV=cln& webpack --config ./config/client.config.js",
+    "srv": "node ./src/server.js",
+    "dep": "npm run build.srv & npm run build.cln & npm run srv"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.8",
+    "express": "^4.16.2",
+    "style-loader": "^0.19.1",
+    "vue": "^2.5.13",
+    "vue-loader": "^13.7.0",
+    "vue-server-renderer": "^2.5.13",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
