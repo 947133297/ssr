@@ -1,2 +1,8 @@
-show the basic usage of vue-ssr
-npm run dev
+## 说明
+    展示了最基本的SSR用法，运行服务器：npm run dev，接着访问：http://localhost:8080/，即可看到效果。这个例子中，仅仅是服务端渲染了一个静态页面出来，到了前端展示时，不具备任何动态性。
+## 要点
+1. 根据一个html模板创建一个renderer
+1. 模板中{{{}}}中的内容不会被转义，而是直接输出，{{}}中的内容会被转义，这两种方式用于输出context中的值
+1. 模板中这个注释<!--vue-ssr-outlet-->确定了vue实例要被渲染的位置
+1. vue实例由一个工厂函数createApp来生成
+ 

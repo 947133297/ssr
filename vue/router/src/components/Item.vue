@@ -5,12 +5,12 @@
 <script>
     export default {
         asyncData ({ store, route }) {
-            // return the Promise from the action
+            // 执行这个函数来触发获取数据的逻辑
             return store.dispatch('fetchItem', route.params.id)
         },
 
         computed: {
-            // display the item from store state.
+            // 从 store 的 state 对象中的获取 item。
             item () {
                 return this.$store.state.items[this.$route.params.id]
             }

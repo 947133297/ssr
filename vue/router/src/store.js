@@ -3,8 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-// Assume we have a universal API that returns Promises
-// and ignore the implementation details
+// 一个异步获取服务器数据的API
 import { fetchItem } from './utils/api'
 
 export function createStore () {
@@ -14,8 +13,8 @@ export function createStore () {
         },
         actions: {
             fetchItem ({ commit }, id) {
-                // return the Promise via `store.dispatch()` so that we know
-                // when the data has been fetched
+
+                // 获取完数据后执行setItem，将数据设置到store的state上
                 return fetchItem(id).then(item => {
                     commit('setItem', { id, item })
                 })
